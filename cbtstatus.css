@@ -1,0 +1,139 @@
+
+
+body, html{
+  margin:0;
+  padding:0;
+  background-color: white;
+  font-family: sans-serif;
+} 
+
+
+h1 {
+	text-align: center;
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	font-size: 3vw;
+	font-family: sans-serif;
+	white-space: pre;
+	margin: 0;
+	border: 0;
+	border-bottom: 1px #ff6666;
+	padding: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 60px;
+	background-color:  #e60000
+
+}
+
+h2 {
+
+	margin: 0;
+	border: 0;
+	border-bottom: 1px #ff6666;
+	padding: 0;
+	width: 100%;
+	height: 40px;
+	background-color:  #ffb3b3	
+}
+
+.question {
+	height: 16px;
+	width: 16px;
+}
+
+#qMark {
+	height: 50px !important;
+	width: 50px !important;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 110%;
+}
+
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+#maincontent {
+
+  width: 90%;
+  margin: auto;
+  background-color: #ffb3b3;
+  border: 1px solid #ff6666;
+  border-top: 50px white;
+}
+
+#tabel {
+
+  width: 100%;
+  margin: auto;
+
+}
+
+.knop {
+	background-color: #ff6666;
+    border: none;
+    color: white;
+    padding: 4px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.knop1 {
+	background-color: white; 
+    color: black; 
+    padding: 15px 25px;
+    border: 2px solid #ff6666;
+}
+#myTable {
+	border-collapse: collapse;
+	border: 1px solid grey;
+	width: 75%;
+	margin: auto;
+	text-align: center;
+}
+
+th {
+	background-color: #ff6666;
+	border: 1px solid grey;
+}
+
+#myTable tr:nth-child(even){
+	background-color: white;
+}
+
+#myTable tr:hover {
+	background-color: #ddd;
+}
+
