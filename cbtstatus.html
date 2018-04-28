@@ -6,119 +6,128 @@
 <html>
 
 <head>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
-	<title>CBT Status Check</title>
-	
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js"></script>
+  <title>CBT Status Check</title>
 
 </head>
+
 <body>
-	<p> </p>
-	<h1>CBT  STATUS  CHECK</h1>
-	<h2> </h2>
-	<div> </div>
-	<div id="maincontent">
+  <p> </p>
+  <h1>CBT STATUS CHECK</h1>
+  <h2> </h2>
+  <div> </div>
+  <div id="maincontent">
 
-		<p>	
-			<strong>Bedrag van de aanslag:</strong>
-			<input type="number" id="bedrag" value="" name="bedragAanslag">
-			<strong>Dagtekening:</strong>
-			<input type="text" id="datum" name="dagTekening" placeholder="DD-MM-YYYY">
-			<button class="knop knop2" onclick="berekenen()">Bereken!</button> <button class="knop knop1" onclick="window.location.reload()"><strong>Nieuwe berekening starten!</strong></button> 
+    <p>
+      <div id="row1">
+        <div id="column1">
+          <strong>Bedrag van de aanslag:</strong>
+          <input type="number" id="bedrag" value="" name="bedragAanslag">
 
-		 </p>
-		 <p><div class="tooltip">
-								<img src="important.svg" class="question" id="qMark">
-								<span class="tooltiptext">voer <strong>altijd</strong> het bedrag van de aanslag en de dagtekening in voor je verder gaat met het berekenen van de voorsprong en achterstand!</span>
-							</div>
-		</p>
+          <strong>Dagtekening:</strong>
+          <input type="text" id="datum" name="dagTekening" placeholder="DD-MM-YYYY">
+        </div>
+        <div id="column3">
+          <button class="knop knop2" onclick="berekenen()">Bereken!</button> <button class="knop knop1" onclick="window.location.reload()"><strong>Nieuwe berekening starten!</strong></button>
+        </div>
+      </div>
+    </p>
+    <p>
+      <div class="tooltip">
+        <img src="important.svg" class="question" id="qMark">
+        <span class="tooltiptext">voer <strong>altijd</strong> het bedrag van de aanslag en de dagtekening in voor je verder gaat met het berekenen van de voorsprong en achterstand!</span>
+      </div>
+    </p>
 
-			<p id="mbedrag"></p>
-			<p id="restbedrag"></p>
-		
-				<div id="tabel">
-					<table id="myTable">
-  						<tr id="headers">
-    						<th>Termijn</th>
-   							<th>Openstaand</th>
-   							<th>Betaaldatum</th>
-  						</tr>
+    <p id="mbedrag"></p>
+    <p id="restbedrag"></p>
 
-					</table>
-				</div>
-		
-			<br><br>
-			<hr>
+    <div id="tabel">
+      <table id="myTable">
+        <tr id="headers">
+          <th>Termijn</th>
+          <th>Openstaand</th>
+          <th>Betaaldatum</th>
+        </tr>
 
-			<div>
-				<h3>Bereken de achterstand:</h3> <br>
-				<table id="berekenAchterstand">
-					<tr>
-						</td></div>
-							<td>
-								Openstaand op <strong>eerstvolgende</strong> betaaldatum: 
-							<div class="tooltip">
-								<img src="question.svg" class="question">
-								<span class="tooltiptext">Voer hier in wat op de eerstvolgende datum open zou moeten staan volgens bovenstaande tabel.<br><br><strong>Voorbeeld:</strong> Klant belt op 19-04-2018, eerst volgende betaaldatum is 02-05-2018. Vul hier dan het bedrag in dat volgens de tabel betaald zou moeten zijn op 02-05-2018</span>
-							</div>
-						<td><input type="number" id="zouMoeten" value=""></td>
-					</tr>
-					<tr>
-						<td>
-							Openstaand op dit moment: 
-							<div class="tooltip">
-								<img src="question.svg" class="question">
-								<span class="tooltiptext">Voer hier in wat op dit moment open staat in DACAS/INL.</span>
-							</div>
-						</td>
-						<td><input type="number" id="werkelijkOpen" value="" ></td>
-					</tr>
-					<tr>
-						<td>_____________= </td>
-						<td><button class="knop knop2" onclick="achterstand()">Bereken!</button></td>
-					</tr>
-					<tr>
-						<td id="achtr"> </td>
-					</tr>
-				</table>
-			</div>
-			
-			<br><br>	
-			<hr>	
-			<br>
-			
-			<div>	
-				<h3>Bereken de voorsprong:</h3> <br>
-				
-				<table id="berekenVoorsprong">
-					<tr>
+      </table>
+    </div>
 
-					</tr>
-					<tr>
-						<td>
-							Openstaand op dit moment: 
-							<div class="tooltip">
-								<img src="question.svg" class="question">
-								<span class="tooltiptext">Voer hier in wat op dit moment open staat in DACAS/INL.</span>
-							</div>
-						</td>
-						</div>
-						<td><input type="number" id="huidigOpen" value="" ></td>
-					</tr>
-					<tr>
+    <br><br>
+    <hr>
 
-					</tr>
-					<tr>
-						<td>_____________= </td>
-						<td><button class="knop knop2" onclick="voorsprong()">Bereken!</button></td>
-					</tr>
-					<tr>
-						<td id="vrspr">  </td>
-					</tr>				
-				</table>
-	
-			</div>
-			<div class="tooltip">
+    <div>
+      <h3>Bereken de achterstand:</h3> <br>
+      <table id="berekenAchterstand">
+        <tr>
+          </td>
+    </div>
+    <td>
+      Openstaand op <strong>eerstvolgende</strong> betaaldatum:
+      <div class="tooltip">
+        <img src="question.svg" class="question">
+        <span class="tooltiptext">Voer hier in wat op de eerstvolgende datum open zou moeten staan volgens bovenstaande tabel.<br><br><strong>Voorbeeld:</strong> Klant belt op 19-04-2018, eerst volgende betaaldatum is 02-05-2018. Vul hier dan het bedrag in dat volgens de tabel betaald zou moeten zijn op 02-05-2018</span>
+      </div>
+      <td><input type="number" id="zouMoeten" value=""></td>
+      </tr>
+      <tr>
+        <td>
+          Openstaand op dit moment:
+          <div class="tooltip">
+            <img src="question.svg" class="question">
+            <span class="tooltiptext">Voer hier in wat op dit moment open staat in DACAS/INL.</span>
+          </div>
+        </td>
+        <td><input type="number" id="werkelijkOpen" value=""></td>
+      </tr>
+      <tr>
+        <td>_____________= </td>
+        <td><button class="knop knop2" onclick="achterstand()">Bereken!</button></td>
+      </tr>
+      <tr>
+        <td id="achtr"> </td>
+      </tr>
+      </table>
+  </div>
 
-<script src="cbtstatus.js"></script>
+  <br><br>
+  <hr>
+  <br>
+
+  <div>
+    <h3>Bereken de voorsprong:</h3> <br>
+
+    <table id="berekenVoorsprong">
+      <tr>
+
+      </tr>
+      <tr>
+        <td>
+          Openstaand op dit moment:
+          <div class="tooltip">
+            <img src="question.svg" class="question">
+            <span class="tooltiptext">Voer hier in wat op dit moment open staat in DACAS/INL.</span>
+          </div>
+        </td>
+  </div>
+  <td><input type="number" id="huidigOpen" value=""></td>
+  </tr>
+  <tr>
+
+  </tr>
+  <tr>
+    <td>_____________= </td>
+    <td><button class="knop knop2" onclick="voorsprong()">Bereken!</button></td>
+  </tr>
+  <tr>
+    <td id="vrspr"> </td>
+  </tr>
+  </table>
+
+  </div>
+  <div class="tooltip">
+
+    <script src="cbtstatus.js"></script>
 </body>
+
 </html>
