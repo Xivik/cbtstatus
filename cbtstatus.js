@@ -1,5 +1,11 @@
 function berekenen() {
 
+var Parent = document.getElementById("myTable");
+while(Parent.hasChildNodes())
+{
+   Parent.removeChild(Parent.firstChild);
+}
+
 var openStaand = document.getElementById("bedrag").value;
 var maandBedrag = Math.ceil(openStaand / 24);
 var termijn = 0;
