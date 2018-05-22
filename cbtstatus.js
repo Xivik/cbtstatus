@@ -1,5 +1,10 @@
 function berekenen() {
 
+const form = document.getElementById("schema");
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+});
+
 var Parent = document.getElementById("myTable");
 while(Parent.hasChildNodes())
 {
@@ -55,6 +60,11 @@ while (openStaand > 0) {
 
 function achterstand() {
 	
+	const form = document.getElementById("berAchterstand");
+	form.addEventListener("submit", function(e) {
+  	e.preventDefault();
+});
+
 	var volSchema = document.getElementById("zouMoeten").value;
 	var actOpen = document.getElementById("werkelijkOpen").value;
 	var achterS = actOpen - volSchema;
@@ -64,6 +74,11 @@ function achterstand() {
 }
 
 function voorsprong() {
+
+	const form = document.getElementById("berVoorsprong");
+	form.addEventListener("submit", function(e) {
+  	e.preventDefault();
+});
 
 var openStaand = document.getElementById("bedrag").value;
 var maandBedrag = Math.ceil(openStaand / 24);
