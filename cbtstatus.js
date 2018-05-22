@@ -5,11 +5,11 @@ form.addEventListener("submit", function(e) {
   e.preventDefault();
 });
 
-var Parent = document.getElementById("myTable");
-while(Parent.hasChildNodes())
-{
-   Parent.removeChild(Parent.firstChild);
-}
+
+ var rowCount = myTable.rows.length;
+for (let i = rowCount - 1; i > 0; i--) {
+      myTable.deleteRow(i);
+   }
 
 var openStaand = document.getElementById("bedrag").value;
 var maandBedrag = Math.ceil(openStaand / 24);

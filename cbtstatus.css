@@ -1,6 +1,6 @@
 
 
-body, html{
+body {
   margin:0;
   padding:0;
   background-color: white;
@@ -24,17 +24,6 @@ h1 {
 	line-height: 60px;
 	background-color:  #e60000
 
-}
-
-h2 {
-
-	margin: 0;
-	border: 0;
-	border-bottom: 1px #ff6666;
-	padding: 0;
-	width: 100%;
-	height: 40px;
-	background-color:  #ffb3b3	
 }
 
 .question {
@@ -84,6 +73,9 @@ h2 {
 
   width: 90%;
   margin: auto;
+  margin-top: 20px;
+  padding-left: 10px;
+  padding-top: 10px;
   background-color: #ffb3b3;
   border: 1px solid #ff6666;
   border-top: 50px white;
@@ -109,18 +101,13 @@ h2 {
     cursor: pointer;
 }
 
-.knop1 {
-	background-color: white; 
-    color: black; 
-    padding: 15px 25px;
-    border: 2px solid #ff6666;
-}
 #myTable {
 	border-collapse: collapse;
 	border: 1px solid grey;
 	width: 75%;
 	margin: auto;
 	text-align: center;
+  margin-bottom: 30px;
 }
 
 th {
@@ -136,3 +123,9 @@ th {
 	background-color: #ddd;
 }
 
+.calcForms {
+  margin-bottom: 30px;
+}
+.invoer {
+  padding-right: 122px;
+}
